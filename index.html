@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>臉譜大師</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/text.css"/>
+    <link rel="stylesheet" href="css/960.css"/>
+    <link rel="stylesheet" href="css/demo.css"/>
+    <link rel="stylesheet" href="css/party.css"/>
+    <link rel="stylesheet" href="JQuery/jquery-ui-1.11.2/jquery-ui.css" />
+    <script src="JQuery/jquery-2.1.1.js"></script>
+    <script src="JQuery/jquery-ui-1.11.2/jquery-ui.js"></script>
+    <script src="Javascript.js"></script>
+</head>
+<body>
+
+<div class="container_12">
+
+    <div class="grid_3">
+        <img src="images/logo.png" alt="Funny Face 2015" class="logo" />
+    </div>
+
+
+    <div class="grid_9 center tabs" style="text-align:right">
+        <p class="instructions" style="text-align:right;margin-top:60px">在臉上試試看這些配件吧!</p>
+
+    </div>
+
+    <div class="clear"></div>
+
+
+    <div class="grid_6 prefix_3 suffix_3">
+        <p class="drop">
+            把你的臉拖到這裡 <br/>
+            <span class="attention">JPG 圖檔，最多300KB</span>
+            <progress max="100" value="0"></progress>
+            <span id="val" style="position:absolute; width:80%; left:10%; color:#fff; font-weight:400;">0%</span>
+            <input type="file" id="file" />
+        </p>
+    </div>
+
+    <div class="clear"></div>
+    
+    <div class="grid_2 prefix_3 center">Size</div>
+    <div class="grid_2 center">Delete</div>
+    <div class="grid_2 suffix_3 center">Rotate</div>
+    <div class="clear"></div>
+
+    <div class="grid_1 prefix_3">
+        <button id="plus" class="button" onClick="Focus.scale(0.2)">放大</button>
+    </div>
+
+    <div class="grid_1">
+        <button id="minus" class="button" onClick="Focus.scale(-0.2)">縮小</button>
+    </div>
+
+    <div class="grid_1">
+        <button id="all_clear" class="button" onClick="obj.forEach(function (ob){if(ob==null || ob.alt=='face')return; ob.Reset();})">清空</button>
+    </div>
+
+    <div class="grid_1">
+        <button id="clear" class="button" onClick="Focus.Reset()">清除</button>
+    </div>
+
+    <div class="grid_1">
+        <button id="left" class="button" onClick="Focus.rotate(-10)">左轉</button>
+    </div>
+
+    <div class="grid_1 suffix_3">
+        <button id="right" class="button" onClick="Focus.rotate(10)">右轉</button>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="grid_6 prefix_3 suffix_3">
+        <div id="picture" class="picture">
+            <div style="display:none;"><img alt="face" /></div>
+            <div id="imageFace" class="picture"></div>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+	<div class="tabs" style="	margin: 10px auto;
+	text-align: right;
+	position: relative;
+	top: -70px;
+	right: 5px;">
+	
+        <div id="menu_1" class="menuitem active" title="Hats"></div>
+        <div id="menu_2" class="menuitem" title="Glasses"></div>
+        <div id="menu_3" class="menuitem" title="Beards"></div>
+	</div>
+    <div class="clear"></div>
+    <div class="tab-content" style="	margin-top: -70px;">
+        <div class="grid_12 submenu center active">
+            <img src="images/accessories/HAT_1.png" alt="Hats" class="accessories"/>
+            <img src="images/accessories/HAT_2.png" alt="Hats" class="accessories"/>
+            <img src="images/accessories/HAT_3.png" alt="Hats" class="accessories"/>
+            <img src="images/accessories/HAT_4.png" alt="Hats" class="accessories"/>
+        </div>
+        <div class="grid_12 submenu center">
+            <img src="images/accessories/GLASSES_1.png" alt="Glasses" class="accessories"/>
+            <img src="images/accessories/GLASSES_2.png" alt="Glasses" class="accessories"/>
+            <img src="images/accessories/GLASSES_3.png" alt="Glasses" class="accessories"/>
+        </div>
+
+        <div class="grid_12 submenu center">
+            <img src="images/accessories/BEARD_1.png" alt="Beards" class="accessories"/>
+            <img src="images/accessories/BEARD_2.png" alt="Beards" class="accessories"/>
+            <img src="images/accessories/BEARD_3.png" alt="Beards" class="accessories"/>
+            <img src="images/accessories/BEARD_4.png" alt="Beards" class="accessories"/>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="grid_4 prefix_4 suffix_4 center">
+        <p>
+            <button id="save" class="button" onclick="javascript:savePicture();" style="width:100px">儲存圖片</button>
+        </p>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="grid_12">
+        <p>
+           
+        </p>
+    </div>
+
+    <div class="clear"></div>
+
+</div>
+
+</body>
+</html>
